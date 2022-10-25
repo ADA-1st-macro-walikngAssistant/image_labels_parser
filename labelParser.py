@@ -34,9 +34,6 @@ def parseLabel(file_names_list):
         content = content.split('\n')
 
         print('content:', content)
-        # print(type(content))
-        # print('content[0]:', content[0], 'content[1]:', content[1])
-        # print('type(content[0]):', type(content[0]), 'type(content[1]):', type(content[1]))
 
         # # Replace the partial string '16 0.' with '17 0.'
         for i in range(len(content)):
@@ -48,6 +45,7 @@ def parseLabel(file_names_list):
             f.write('\n'.join(content))
             f.close()
 
+        print('\n')
     values = str(files_dictionary.values())
     print(values)
 
