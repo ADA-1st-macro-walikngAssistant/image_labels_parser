@@ -1,7 +1,7 @@
 import os
 import re
 
-path = '/home/raymond/Downloads/development/image_labels_parser/labels_1465-1830'
+path = '/home/raymond/Downloads/development/image_labels_parser/labels_err'
 files = sorted(os.listdir(path))
 file_names_list = []
 files_dictionary = {}
@@ -33,9 +33,9 @@ def parseLabel(file_names_list):
         content = content.split('\n')
         print('content:', content)
 
-        # Replace the partial string '16 0.' with '17 0.'
+        # Replace the partial string '1 0.' with another partial string '0 0.'.
         for i in range(len(content)):
-            content[i] = content[i].replace('16 0.', '17 0.')
+            content[i] = content[i].replace('1 0.', '0 0.')
             print(f'Replaced content[{i}]:', content[i])
 
             # Write the content to the original text file
